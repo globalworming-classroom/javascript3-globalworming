@@ -45,15 +45,14 @@ for (let counter = 0, moreCounter = 0; counter <= 6; counter += 5, moreCounter++
         const removeAndReturnNumberOfRemaining = (i) => {
             console.log(`pineapple ${i}`)
             let element = document.getElementsByClassName("pineapple").item(0);
-            if (element !== undefined) {
+            if (!!element) {
                 element.remove()
             }
             return document.getElementsByClassName("pineapple").length
         }
 
-        for (removeAndReturnNumberOfRemaining(1); removeAndReturnNumberOfRemaining(2) < 1; removeAndReturnNumberOfRemaining(4)) {
+        for (removeAndReturnNumberOfRemaining(1); removeAndReturnNumberOfRemaining(2) > 0; removeAndReturnNumberOfRemaining(4)) {
             removeAndReturnNumberOfRemaining(3);
-            break;
         }
 
     };
